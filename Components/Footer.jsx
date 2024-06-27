@@ -8,9 +8,9 @@ const Footer = () => {
       <Image src={assets.logo} alt='' />
       <p className='text-sm text-white'>Copyright © 2024, All right reserved by JB IT Solution</p>
       <div className='flex'>
-        <Image src={assets.facebook_icon} alt='' width={40} />
-        <Image src={assets.twitter_icon} alt='' width={40} />
-        <Image src={assets.googleplus_icon} alt='' width={40} />
+        <Image src={assets.facebook_icon} alt='' width={40} height={40} />
+        <Image src={assets.twitter_icon} alt='' width={40} height={40} />
+        <Image src={assets.googleplus_icon} alt='' width={40} height={40} />
       </div>
     </div>
   )

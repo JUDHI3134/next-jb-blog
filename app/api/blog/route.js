@@ -12,8 +12,17 @@ const loadDB = async () =>{
 loadDB();
 
 
+//API end point to getting all blogs
 export async function GET(request){
-    return NextResponse.json({message:"Api Working"})
+    const blogId = request.nextUrl.searchParams.get("id")
+
+    if(blogId){
+        const blog = await BlogModel.findById(blogId)
+        return NextResponse.json(blog)
+    }else{
+        const blogs = await BlogModel.find({})
+        return NextResponse.json({blogs})
+    }
 }
 
 
